@@ -16,7 +16,7 @@ function Header() {
             </nav>
 
             <div className="actions">
-                <button className="SignIn">Sign In</button>
+                <button className="BookDemo">Sign In</button>
                 <button className="GetStarted">Get Started</button>
             </div>
 
