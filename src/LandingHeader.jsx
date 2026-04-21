@@ -1,9 +1,9 @@
 import Logo from './assets/Logo.png';
+import { Link } from "react-router-dom";
 
 function Header() {
     return (
         <header className="navbar">
-
             <div className="logo">
                 <img src={Logo} alt="Logo" />
                 <h1><b>PickSell</b></h1>
@@ -16,10 +16,11 @@ function Header() {
             </nav>
 
             <div className="actions">
-                <button className="BookDemo">Sign In</button>
-                <button className="GetStarted">Get Started</button>
+                <Link to="/auth">
+                    <button className="btn book-demo">Sign In</button>
+                </Link>
+                <button className="btn get-started">Get Started</button>
             </div>
-
         </header>
     );
 }

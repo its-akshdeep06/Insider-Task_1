@@ -1,25 +1,40 @@
-import Monitor from './assets/monitor.svg';
-import Percent from './assets/payments.svg';
-import Truck from './assets/truck.svg';
+import Monitor from './assets/Computer.png';
+import Percent from './assets/Percent.png';
+import Truck from './assets/Truck.png';
 
 function LandingBottomPart() {
-
     return (
-        <section>
-            <div>
-                <img src={Monitor} alt="Monitor Image" />
-                <b>Instant Web & App</b>
-                Start selling today
-            </div>
-            <div>
-                <img src={Percent} alt="Percentage Image" />
-                <b>Integrated Payments</b>
-                &lt;1% transaction fee
-            </div>
-            <div>
-                <img src={Truck} alt="Truck Image" />
-                <b>Integrated global delivery and logistics</b>
-                Live tracking
+        <section className="features-section">
+            <div className="features-grid">
+                <article className="feature-card">
+                    <div className="feature-icon">
+                        <img src={Monitor} alt="Monitor icon" />
+                    </div>
+                    <div>
+                        <b>Instant Web & App</b>
+                        <p>Start selling today</p>
+                    </div>
+                </article>
+
+                <article className="feature-card">
+                    <div className="feature-icon">
+                        <img src={Percent} alt="Payment icon" />
+                    </div>
+                    <div>
+                        <b>Integrated Payments</b>
+                        <p>&lt;1% transaction fee</p>
+                    </div>
+                </article>
+
+                <article className="feature-card">
+                    <div className="feature-icon">
+                        <img src={Truck} alt="Delivery icon" />
+                    </div>
+                    <div>
+                        <b>Integrated global delivery and logistics</b>
+                        <p className="abc">Live tracking</p>
+                    </div>
+                </article>
             </div>
         </section>
     );

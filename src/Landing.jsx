@@ -3,7 +3,6 @@ import LandingHero from './LandingHero';
 import LandingBottomPart from './LandBottomPart';
 
 export default function Landing() {
-
     return (
         <div>
             <Header />
