@@ -16,11 +16,16 @@ function Auth() {
     const [showPassword, setShowPassword] = useState(false);
 
     // Auto-slide every 4 seconds
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentSlide((prev) => (prev + 1) % slides.length);
+    useEffect(function () {
+        var timer = setInterval(function () {
+            setCurrentSlide(function (prev) {
+                return (prev + 1) % slides.length;
+            });
         }, 4000);
-        return () => clearInterval(timer);
+
+        return function () {
+            clearInterval(timer);
+        };
     }, []);
 
     return (
@@ -75,12 +80,14 @@ function Auth() {
                     <h1>Create an account</h1>
                     <p>
                         Already have an account?{" "}
-                        <a href="#">Log in</a>
+                        <Link to="/Login">
+                            <a href="#">Log in</a>
+                        </Link>
                     </p>
 
                     {/* Name fields */}
                     <div className="auth-row">
-                        <input type="text" placeholder="Fletcher" className="auth-input" />
+                        <input type="text" placeholder="First Name" className="auth-input" />
                         <input type="text" placeholder="Last name" className="auth-input" />
                     </div>
 
@@ -95,7 +102,9 @@ function Auth() {
                         />
                         <span
                             className="eye-icon"
-                            onClick={() => setShowPassword(!showPassword)}
+                            onClick={function () {
+                                setShowPassword(!showPassword);
+                            }}
                         >
                             <img
                                 src={showPassword ? EyeOffIcon : EyeIcon}

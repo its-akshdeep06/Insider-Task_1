@@ -434,7 +434,7 @@ body {
 .eye-icon {
     position: absolute;
     right: 14px;
-    top: 50%;
+    top: 28px;
     transform: translateY(-60%);
     cursor: pointer;
     display: flex;
@@ -565,4 +565,32 @@ body {
     .auth-right {
         padding: 24px 20px;
     }
+}
+
+.auth-form-box h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.auth-subtext {
+    font-size: 14px;
+    color: #b0a5c0;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    white-space: nowrap;   /* IMPORTANT: prevents breaking */
+}
+
+.auth-link {
+    color: #a78bfa;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
 }
