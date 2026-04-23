@@ -25,6 +25,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 }
 
 .logo img {
@@ -602,6 +603,7 @@ body {
     align-items: center;
     gap: 10px;
     margin-bottom: 32px;
+    cursor: pointer;
 }
 
 .dash-sidebar-logo img {
@@ -698,7 +700,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
 }
 
 .dash-search {
@@ -725,15 +726,11 @@ body {
     color: rgba(255, 255, 255, 0.55);
 }
 
-.dash-search-icon {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.95rem;
-}
-
 .dash-header-icons {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
+    margin-left: -100px;
 }
 
 .dash-header-icons img {

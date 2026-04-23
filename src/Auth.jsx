@@ -7,14 +7,15 @@ import Apple from './assets/apple.svg';
 import AmuLogo from './assets/amu-logo.svg';
 import EyeIcon from './assets/eye.svg';
 import EyeOffIcon from './assets/eye-off.svg';
-import { Link } from "react-router-dom";
-import { GoogleLogin, useGoogleLogin } from "@react-oauth/google";
+import { Link, useNavigate } from "react-router-dom";
+import { useGoogleLogin } from "@react-oauth/google";
 
 const slides = [Img1, Img2, Img3];
 
 function Auth() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
 
     const googleLogin = useGoogleLogin({
         onSuccess: tokenResponse => {
@@ -35,7 +36,7 @@ function Auth() {
         return function () {
             clearInterval(timer);
         };
-    }, []); 
+    }, []);
 
     return (
         <section className="auth-container">
@@ -89,8 +90,8 @@ function Auth() {
                     <h1>Create an account</h1>
                     <p>
                         Already have an account?{" "}
-                        <Link to="/Login">
-                            <a href="#">Log in</a>
+                        <Link to="/Login" className="login-link">
+                            Log in
                         </Link>
                     </p>
 
@@ -145,11 +146,12 @@ function Auth() {
 
                     {/* Social buttons */}
                     <div className="auth-social">
-                        <button onClick={googleLogin}>
+                        <button type="button" onClick={() => googleLogin()}>
                             <img src={Google} alt="Google" />
                             Google
                         </button>
-                        <button>
+
+                        <button type="button">
                             <img src={Apple} alt="Apple" />
                             Apple
                         </button>
