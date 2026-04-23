@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Logo from './assets/Logo.png';
 import DashboardHero from './DashboardHero';
 import DashboardRightBar from './DashboardRightBar';
 import IconDashboard from './assets/icon-dashboard.svg';
@@ -36,8 +35,9 @@ function Dashboard() {
 
                 {/* Logo */}
                 <div className="dash-sidebar-logo">
-                    <img src={Logo} alt="Logo" />
-                    <h2>PickSell</h2>
+                    <Link to="/" className="dash-header-link">
+                        <h2>PickSell</h2>
+                    </Link>
                 </div>
 
                 {/* Main Navigation */}

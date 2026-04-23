@@ -1,5 +1,6 @@
 import LandingImage from './assets/LandImg.png';
 import Curve from './assets/teal-curve.svg';
+import { Link } from "react-router-dom";
 
 function LandingHero() {
     return (
@@ -10,8 +11,12 @@ function LandingHero() {
                     <p>Connect your bank account and start selling to the world today!</p>
                 </div>
                 <div className="actions">
+                    <Link to="/Dashboard">
                     <button className="btn get-started">Get Started</button>
-                    <button className="btn book-demo">Book a demo</button>
+                </Link>
+                <Link to="/auth">
+                    <button className="btn book-demo">Sign In</button>
+                </Link>
                 </div>
             </div>
 
