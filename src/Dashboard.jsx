@@ -36,9 +36,8 @@ function Dashboard() {
 
                 {/* Logo */}
                 <div className="dash-sidebar-logo">
-                    <Link to="/" className="dash-header-link">
-                        <h2>PickSell</h2>
-                    </Link>
+                    <img src={Logo} alt="Logo" />
+                    <h2>PickSell</h2>
                 </div>
 
                 {/* Main Navigation */}

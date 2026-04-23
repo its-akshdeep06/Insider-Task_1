@@ -4,12 +4,10 @@ import { Link } from "react-router-dom";
 function Header() {
     return (
         <header className="navbar">
-            <Link to="/" className="dash-header-link">
-                <div className="logo">
-                    <img src={Logo} alt="Logo" />
-                    <h1><b>PickSell</b></h1>
-                </div>
-            </Link>
+            <div className="logo">
+                <img src={Logo} alt="Logo" />
+                <h1><b>PickSell</b></h1>
+            </div>
 
             <nav className="nav-links">
                 <p>Catalogue</p>
